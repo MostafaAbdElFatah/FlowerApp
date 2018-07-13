@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/orderidStatusChildItem"
+                android:layout_weight="1"
+                android:paddingLeft="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="-sfskjs453g2sgjgsg8s5g4s" />
+            <TextView
+                android:id="@+id/paymentStatusChildItem"
+                android:paddingLeft="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Payment" />
+            <TextView
+                android:id="@+id/phoneStatusChildItem"
+                android:paddingLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0159238412"/>
+            <TextView
+                android:id="@+id/addressStatusChildItem"
+                android:paddingLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" 250 asd st asden"/>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

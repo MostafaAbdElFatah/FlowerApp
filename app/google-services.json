@@ -1,0 +1,143 @@
+{
+  "project_info": {
+    "project_number": "351090095581",
+    "firebase_url": "https://flowerapp-89831.firebaseio.com",
+    "project_id": "flowerapp-89831",
+    "storage_bucket": "flowerapp-89831.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351090095581:android:74ae0227cb8a86bb",
+        "android_client_info": {
+          "package_name": "com.mostafa.fci.floweradminapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351090095581-finadgvo2uf1s4ok3laf9jeuhqq179g1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mostafa.fci.floweradminapp",
+            "certificate_hash": "1783ef7ad5ce51bde3d1bd2445f344633c03dab8"
+          }
+        },
+        {
+          "client_id": "351090095581-mdvkto33nbou1bd5llv9cpae86tvms9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU6MaHb1iPPJRniOs9BjEtDN6JXL2GeVI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351090095581-mdvkto33nbou1bd5llv9cpae86tvms9u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351090095581:android:c7f1d5228a25090e",
+        "android_client_info": {
+          "package_name": "com.mostafa.fci.flowerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351090095581-ad57a9teg36nokmerd3lftge5lb258j8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mostafa.fci.flowerapp",
+            "certificate_hash": "1783ef7ad5ce51bde3d1bd2445f344633c03dab8"
+          }
+        },
+        {
+          "client_id": "351090095581-mdvkto33nbou1bd5llv9cpae86tvms9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU6MaHb1iPPJRniOs9BjEtDN6JXL2GeVI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351090095581-mdvkto33nbou1bd5llv9cpae86tvms9u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351090095581:android:b87abf3241b40e58",
+        "android_client_info": {
+          "package_name": "com.mostafa.fci.flowerserverapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351090095581-ofq3fdj7cb0degnaa54qr2dhb5opbi6h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mostafa.fci.flowerserverapp",
+            "certificate_hash": "1783ef7ad5ce51bde3d1bd2445f344633c03dab8"
+          }
+        },
+        {
+          "client_id": "351090095581-mdvkto33nbou1bd5llv9cpae86tvms9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU6MaHb1iPPJRniOs9BjEtDN6JXL2GeVI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351090095581-mdvkto33nbou1bd5llv9cpae86tvms9u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

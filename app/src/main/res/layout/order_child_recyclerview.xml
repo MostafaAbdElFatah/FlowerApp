@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/orderNameChildItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Flower Name"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:id="@+id/orderQuantityChildItem"
+                    android:paddingLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity : 3"
+                    android:layout_marginRight="10dp" />
+                <TextView
+                    android:id="@+id/orderTotalPriceChildItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="$99.9"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="5"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:id="@+id/redBtn"
+                    android:background="#f00"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:onClick="removeOrderBtnClicked"/>
+            </LinearLayout>
+
+        </LinearLayout>
+            </android.support.v7.widget.CardView>
+</LinearLayout>

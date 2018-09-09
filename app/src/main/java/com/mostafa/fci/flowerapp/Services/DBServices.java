@@ -34,7 +34,8 @@ public class DBServices {
     private static DatabaseReference root = FirebaseDatabase.getInstance()
             .getReferenceFromUrl("https://flowerapp-89831.firebaseio.com/");
     private static DatabaseReference usersChild  = root.child("users");
-    private static DatabaseReference flowersChild  = root.child("flowers");
+    private static DatabaseReference flowersChild  = FirebaseDatabase.getInstance()
+            .getReferenceFromUrl("https://flowerapp-89831.firebaseio.com/flowers");
     private static DatabaseReference userChild = usersChild.child(AuthServices.getUid());
     private static DatabaseReference ordersChild = usersChild.child(AuthServices.getUid()).child("orders");
 
@@ -177,6 +178,8 @@ public class DBServices {
     public static void setOnFetchFlowers(FetchFlowers fetchData){
         flowersChild.addValueEventListener(flowersDataChange);
         fetchFlowers.add(fetchData);
+
+
     }
 
     // get user name
@@ -190,8 +193,8 @@ public class DBServices {
         fetchOrders.add(fetchData);
     }
     // listener for orders Derviry data
-    public static void setOnFetchOrdersDerviry(FetchDerviryOrders fetchData){
+    public static void setOnFetchOrdersDerviry(FetchDerviryOrders fetchOrders){
         ordersChild.addValueEventListener(ordersDataChange);
-        fetchOrdersDerviryList.add(fetchData);
+        fetchOrdersDerviryList.add(fetchOrders);
     }
 }

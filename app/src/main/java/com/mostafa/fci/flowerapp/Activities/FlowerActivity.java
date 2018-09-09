@@ -106,7 +106,6 @@ public class FlowerActivity extends AppCompatActivity
         });
         recyclerView.setAdapter(adapter);
 
-
         if(!Network.isOnLine(FlowerActivity.this)) {
 
             List<Flower> list = RoomDatabase.getDatabase(FlowerActivity.this)

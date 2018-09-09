@@ -2,6 +2,7 @@ package com.mostafa.fci.flowerapp.Utillities;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -43,7 +44,8 @@ public class OrderRVAdapter extends RecyclerView.Adapter<OrderRVAdapter.RVHolder
 
 
     @Override
-    public OrderRVAdapter.RVHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    @NonNull
+    public OrderRVAdapter.RVHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         OrderRVAdapter.RVHolder holder;
         view = LayoutInflater.from(parent.getContext()).inflate(R.layout.order_child_recyclerview, parent, false);
@@ -54,7 +56,7 @@ public class OrderRVAdapter extends RecyclerView.Adapter<OrderRVAdapter.RVHolder
 
 
     @Override
-    public void onBindViewHolder(OrderRVAdapter.RVHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull OrderRVAdapter.RVHolder holder, final int position) {
         final Order order;
         order = arrayList.get(position);
         holder.orderName.setText(order.getFlowerName());
@@ -72,7 +74,7 @@ public class OrderRVAdapter extends RecyclerView.Adapter<OrderRVAdapter.RVHolder
         });
     }
 
-    private void removeItemPosition(Order order){
+    public void removeItemPosition(Order order){
         int index = arrayList.indexOf(order);
         arrayList.remove(index);
         notifyItemRemoved(index);
@@ -85,6 +87,8 @@ public class OrderRVAdapter extends RecyclerView.Adapter<OrderRVAdapter.RVHolder
         if (dataChanged !=null)
             dataChanged.onDataChange();
     }
+
+
 
     @Override
     public int getItemCount() {
@@ -118,7 +122,6 @@ public class OrderRVAdapter extends RecyclerView.Adapter<OrderRVAdapter.RVHolder
         public RVHolder(View itemView,OnItemClickListener clickListener){
             super(itemView);
             this.listener = clickListener;
-            itemView.setOnLongClickListener(this);
             orderName     = itemView.findViewById(R.id.orderNameChildItem);
             orderPrice    = itemView.findViewById(R.id.orderTotalPriceChildItem);
             imageButton   = itemView.findViewById(R.id.redBtn);

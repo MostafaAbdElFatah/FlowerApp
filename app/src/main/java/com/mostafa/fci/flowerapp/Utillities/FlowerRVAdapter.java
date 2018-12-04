@@ -79,11 +79,7 @@ public class FlowerRVAdapter extends RecyclerView.Adapter<FlowerRVAdapter.RVHold
                             .into(holder.flowerImage);
                 }
             });
-
-        }else{
-            Dialog.show(context);
         }
-
     }
 
     @Override

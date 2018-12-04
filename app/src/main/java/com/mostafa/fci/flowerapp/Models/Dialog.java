@@ -13,7 +13,7 @@ public class Dialog {
     public static void show(final Context context){
         builder = new AlertDialog.Builder(context);
         builder.setTitle("Can't Connect to  Network");
-        builder.setMessage("Please Connect to Internet , Network to get Flowers List .....");
+        builder.setMessage("Please Connect to Internet, to get The Latest Flowers List .....");
         builder.setNegativeButton("Ok", new DialogInterface.OnClickListener(){
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

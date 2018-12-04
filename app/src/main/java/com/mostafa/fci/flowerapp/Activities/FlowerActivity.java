@@ -1,5 +1,6 @@
 package com.mostafa.fci.flowerapp.Activities;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -70,7 +71,6 @@ public class FlowerActivity extends AppCompatActivity
             @Override
             public void onCompleted(UserInfo user) {
                 if (user.getName() != "" || user.getName() != null) {
-
                     navUsername.setText(user.getName());
                 }
             }
@@ -88,9 +88,6 @@ public class FlowerActivity extends AppCompatActivity
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/NABILA.TTF");
-
-
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
@@ -107,17 +104,28 @@ public class FlowerActivity extends AppCompatActivity
         recyclerView.setAdapter(adapter);
 
         if(!Network.isOnLine(FlowerActivity.this)) {
+            Dialog.show(FlowerActivity.this);
+        }
+        this.getData();
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        this.getData();
+    }
+
+    protected void getData() {
+        if(!Network.isOnLine(FlowerActivity.this)) {
             List<Flower> list = RoomDatabase.getDatabase(FlowerActivity.this)
                     .daoDatabase().fetchAllFlowers();
             if (list.size() > 0) {
                 flowersList.clear();
                 flowersList.addAll(list);
                 adapter.notifyDataSetChanged();;
-            }else {
-                Dialog.show(FlowerActivity.this);
             }
         }else{
+            progressBar.setVisibility(View.VISIBLE);
             DBServices.setOnFetchFlowers(new FetchFlowers() {
                 @Override
                 public void onCompleted(ArrayList<Flower> flowers) {
@@ -128,30 +136,14 @@ public class FlowerActivity extends AppCompatActivity
                         RoomDatabase.getDatabase(FlowerActivity.this)
                                 .daoDatabase().insertMultipleFlowers(flowers);
                         adapter.notifyDataSetChanged();
+                        progressBar.setVisibility(View.INVISIBLE);
                     }
                 }
             });
         }
         // end if statement
-
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if(!Network.isOnLine(FlowerActivity.this)) {
-
-            List<Flower> list = RoomDatabase.getDatabase(FlowerActivity.this)
-                    .daoDatabase().fetchAllFlowers();
-            if (list.size() > 0) {
-                flowersList.clear();
-                flowersList.addAll(list);
-                adapter.notifyDataSetChanged();
-            }else {
-                Dialog.show(FlowerActivity.this);
-            }
-        }
-    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
